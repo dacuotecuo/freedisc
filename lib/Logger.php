@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_set('Asia/Shanghai');
+date_default_timezone_set("Asia/Shanghai");
 
 class Logger
 {
@@ -9,19 +9,19 @@ class Logger
 	 * @param   $content    日志内容
      * @param   $filename   文件内容
      */
-    static function log ($content, $filename='') {
+    static function log ($content, $filename="") {
 
         if (empty($filename)) {
 
-            $filename = 'debugger';
+            $filename = "debugger";
         }
 
         if (empty($content)) {
-            $content = '';
+            $content = "";
         }
 
-        $content = date('Y-m-d').' '.date('H:m:s').'|'.$content.PHP_EOL;
-        file_put_contents(dirname(__FILE__).'\..\\..\\'.'\Log\\'.$filename.'_'.date('Ymd').'.log', $content, FILE_APPEND);
+        $content = date("Y-m-d")." ".date("H:m:s")."|".$content.PHP_EOL;
+        file_put_contents(dirname(__FILE__)."\..\\"."\logs\\".$filename."_".date("Ymd").".log", $content, FILE_APPEND);
     }
 
     /**
@@ -30,7 +30,7 @@ class Logger
      * @param   $filename   文件内容
      */
     public static function debugger ($content) {
-        self::log($content, '');
+        self::log($content, "");
     }
 
     /**
@@ -39,6 +39,6 @@ class Logger
      * @param   $filename   文件内容
      */
     public static function test ($content) {
-        self::log($content, 'test');
+        self::log($content, "test");
     }
 }

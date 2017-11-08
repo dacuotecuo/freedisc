@@ -6,7 +6,7 @@
         <p>
             <?php
 
-                require_once './lib/Logger.php';
+                require_once "./lib/Logger.php";
 
                 Logger::debugger('test');
             ?>
