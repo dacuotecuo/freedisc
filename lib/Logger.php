@@ -21,7 +21,7 @@ class Logger
         }
 
         $content = date('Y-m-d').' '.date('H:m:s').'|'.$content.PHP_EOL;
-        file_put_contents(dirname(__FILE__).'\..\\'.'\logs\\'.$filename.'_'.date('Ymd').'.log', $content, FILE_APPEND);
+        file_put_contents(dirname(__FILE__).'\..\\..\\'.'\Log\\'.$filename.'_'.date('Ymd').'.log', $content, FILE_APPEND);
     }
 
     /**
