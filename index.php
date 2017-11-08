@@ -1,3 +1,6 @@
+<?php
+set_include_path(dirname(__FILE__));
+?>
 <html>
     <head>
         <title>test</title>
@@ -5,10 +8,11 @@
     <body>
         <p>
             <?php
+                require_once "/lib/Logger.php";
+                require_once "/db/db.php";
 
-                require_once "./lib/Logger.php";
-
-                Logger::debugger('test');
+                db::test();
+                Logger::debugger('index');
             ?>
         </p>
     </body>
