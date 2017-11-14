@@ -11,7 +11,7 @@ set_include_path(dirname(__FILE__));
                 require_once "/lib/Logger.php";
                 require_once "/db/db.php";
 
-                db::test();
+                db::query();
                 Logger::debugger('index');
             ?>
         </p>
